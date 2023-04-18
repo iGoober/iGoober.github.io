@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>HUD Assignment</title>
+   <style>
+    body {
+        padding: 25px;
+        background-color: #121212;
+        color: white;
+        font-size: 25px;
+    }
+      #ball {
+         width: 50px;
+         height: 50px;
+         background-color: red;
+         border-radius: 25px;
+         position: absolute;
+        
+      }
+   </style>
+</head>
+   <body>
+      <div id="ball"></div>
+      <button id="stop-btn">Stop/Move Ball</button>
+      
+      <script>
+            const ball = document.getElementById("ball");
+            let x = 0;
+            let y = 0;
+            let xSpeed = 1;
+            let ySpeed = 1;
+            let animationId;
+
+            function animate() {
+            x += xSpeed;
+            y += ySpeed;
+            if (x + 50 > window.innerWidth || x < 0) {
+                xSpeed = -xSpeed;
+            }
+            if (y + 50 > window.innerHeight || y < 0) {
+                ySpeed = -ySpeed;
+            }
+            ball.style.left = x + "px";
+            ball.style.top = y + "px";
+            animationId = requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        const stopBtn = document.getElementById("stop-btn");
+        stopBtn.addEventListener("click", () => {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            } else {
+                animate();
+            }
+        });
+   </script>
+   <p>The article emphasizes the potential for social media platforms to abuse their influence and power.</p>
+   <br>
+   <p>The podcast makes a very valid point and argues that Facebook's discriminatory advertising practices are deceptively subtle but extremely effective.</p>
+   <br>
+   <p>The articles draw attention to the necessity of tighter controls against data misuse and targeted advertising.</p>
+   <br>
+   <p><strong>As the digital world continues to develop swiftly, policymakers, consumers, and business leaders must be careful in their efforts to promote moral and responsible behaviors that put the interests of users above economic profits.</strong></p>
+    <p></p>
+   </body>
+</html>
+
