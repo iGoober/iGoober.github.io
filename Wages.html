@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <title>Aaron's Data Ethics Hwk</title>
+    <h3>Employers steal billions from workers' paychecks each year</h3>
+    <style>
+        body {
+        padding: 25px;
+        background-color: #121212;
+        color: white;
+        font-size: 25px;
+        } 
+    </style>
+</head>
+<body>
+    <p>It is quite difficult for me to say if the data gathering was ethical or not, but if I had to take a side, I believe it is ethical as the interest of this article aligns with the workers/people. The research and article seem credible as well, but with any statisitc I like to be a bit more cautious.</p>
+    <br>
+    <p>I believe this is a pretty ethical way of introducing data. Definite things not to do is to announce anyone that was involved in the research (that might get them fired... Or worse), or get information without any consent. That may lead to bias in some statisitc, but collecting data of someone without them knowing doesn't quite sit right ethically.</p>
+    <br>
+    <p>Determining whether data is being used ethically is when it is obtained fairly without discrimination, its purpose, and quality.</p>
+    <br>
+    <p>Data scientists have a responsibility to ensure that data is collected in an ethical way such as protecting privacy, and avoiding bias. In my opinion, data scientists have a huge responsibility as they tehcnically have the capability to sway us into a direction. Thus, they need use their skills in a way that benefits society, but this has to be done ethically.</p>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <canvas id="chart"></canvas>
+    <script>
+      const data = {
+        labels: [
+          'California', 'Florida', 'Georgia', 'Illinois', 'Michigan', 
+          'New York', 'North Carolina', 'Ohio', 'Pennsylvania', 'Texas'
+        ],
+        datasets: [{
+          label: 'Total number of minimum-wage-eligible workers',
+          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+          borderColor: 'rgb(54, 162, 235)',
+          borderWidth: 1,
+          data: [59014000, 5515000, 3769000, 5185000, 2861000, 6047000, 3111000, 3915000, 4299000, 9743000],
+        }, {
+          label: 'Total earned annual wages not paid to workers (In USD)',
+          backgroundColor: 'rgba(255, 206, 86, 0.5)',
+          borderColor: 'rgb(255, 206, 86)',
+          borderWidth: 1,
+          data: [8002000000, 1979000000, 1124000000, 301000000, 675000000, 429000000, 965000000, 316000000, 601000000, 448000000, 1165000000],
+        }]
+      };
+  
+      const options = {
+        scales: {
+          y: {
+            beginAtZero: true,
+          }
+        }
+      };
+  
+      const chart = new Chart(document.getElementById('chart'), {
+        type: 'bar',
+        data: data,
+        options: options,
+      });
+    </script>
+</body>
+
