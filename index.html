@@ -1,57 +1,85 @@
 <!DOCTYPE html>
-<!--this was really fun :D-->  
-<html lang="en"></html>
-<style>
-
-    body {
-    padding: 20px;
-    background-color: #121212;
-    color: white;
-    font-size: 20px;
-    }
-    a:link {
-        color: aquamarine;
-        background-color: transparent;
-        text-decoration: none;
-        }
-
-        a:visited {
-        color: aquamarine;
-        background-color: transparent;
-        text-decoration: none;
-        }
-
-        a:hover {
-        color: aquamarine;
-        background-color: transparent;
-        text-decoration: underline;
-        }
-    </style>
+<html>
 <head>
-    <link rel="stylesheet" href="./index.css"/>
-    <h1>Hi!</h1>
+  <title>Project Guide</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <style>
+    .middle-align {
+      vertical-align: middle;
+    }
+    
+    .toolbar-button {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    .info {
+      display: none;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .info-content {
+      margin-bottom: 10px;
+    }
+    
+    .close-button {
+      background-color: #fff;
+      color: #333;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      float: right;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var button = document.querySelector(".toolbar-button");
+      var info = document.querySelector(".info");
+      var closeButton = document.querySelector(".close-button");
+
+      button.addEventListener("click", function() {
+        info.style.display = "block";
+      });
+
+      closeButton.addEventListener("click", function() {
+        info.style.display = "none";
+      });
+    });
+  </script>
 </head>
 <body>
-    <p>How did you get here!? You know how to get to the main page?!</p>
-    <p>Oh gosh this is scary, someone who knows how to use git D:</p>
-    <p>There isn't much in this page as it is being used for one of my classes, but feel free to take a look!</p>
-    <a href="https://igoober.github.io/personal/Aaron">If you were looking for my webpage, here it is!</a>
-
-    <br>
-    <p>Now! Below is class stuff so bewareeeee</p>
-    
-    <a href="https://youtu.be/3_-a9nVZYjk?t=55">Link to my outro music!</a>
-    <br>
-    <a href="https://igoober.github.io/sigcse">SIGSCE</a>
-    <br>
-    <a href="https://igoober.github.io/omelas">OMELAS</a>
-    <br>
-
-    <a href="https://igoober.github.io/aiaccess">AI</a>
-
-    <br>
-    <strong>The Fitness Gram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues</strong>
-    <br>
-    <img src="https://i.ytimg.com/vi/djyTG19Achg/maxresdefault.jpg"></img>
-
+  <div class="container">
+    <div class="toolbar">
+      <button class="toolbar-button">Visitors!</button>
+    </div>
+    <div class="editor">
+      <!-- Document content goes here -->
+      <h1>Game Project</h1>
+      <br>
+      <p><strong>The following numbers indicate what to do first</strong></p>
+      <br>
+      <li>Tutorial on how to set up C# with VScode and Unity</li>
+      <a href="https://www.youtube.com/watch?v=DAsyjpqhDp4&t=48s&ab_channel=TravisMedia" target="_blank">1. How to run C# in VScode</a></p>
+      <a href="https://www.youtube.com/watch?v=1saf4ahn-ek&list=LL&index=5&ab_channel=Zigurous" target="_blank">2. VSCode With Unity</a></p>
+      <br>
+      <div class="info">
+        <div class="info-content">
+          Welcome! This is just a place for my friends and I to use as a reference as we learn how to start this new project; there is nothing particularly interesting here. Feel free to take a look, as it demonstrates how we advanced through the project. Any feedback is appreciated!
+        </div>
+        <button class="close-button">Close</button>
+      </div>
+      <br>
+      <li></li>
+    </div>
+  </div>
 </body>
+</html>
