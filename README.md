@@ -1,2 +1,2 @@
 # iGoober.github.io
-HCI 
+Mostly contains homework assignments
